@@ -1,147 +1,149 @@
 # HotelHawk
 
-HotelHawk is an advanced hotel price analysis platform designed to simplify the process of finding the perfect accommodation. By crawling and aggregating data from leading booking websites like Hotels.ca, Booking.com, and makemytrip.com, HotelHawk allows users to seamlessly compare hotel prices, explore popular destinations, track recent searches, and locate nearby hotels with ease. The platform is built with a user-centric approach, offering features such as customizable filters for price and rating, spell-check functionality, and word completion, ensuring that users have a smooth and efficient experience.
+HotelHawk is an advanced hotel price analysis and comparison platform built to simplify the search for affordable accommodations. It aggregates hotel listings from leading travel websites like **Hotels.ca**, **Booking.com**, and **makemytrip.com**, and delivers real-time, filtered, and ranked results — all with an intuitive UI.
 
-## Project Overview
+> 🚀 This is a forked version of a collaborative project.  
+> I contributed to frontend UI enhancements using React and Material-UI, implemented hotel card components, worked on search filtering logic, and integrated toast and form functionality with React-Hook-Form and React-Toastify.
 
-HotelHawk is divided into two primary components: the **Frontend** and the **Backend**. The project leverages a range of technologies and data structures to deliver high-performance and reliable results.
+---
 
-### Key Features
+## 📌 Overview
 
-- **Hotel Data Aggregation**: HotelHawk collects and aggregates hotel data from multiple booking websites using selenium web crawler, allowing users to compare prices and features across different platforms.
-- **Customizable Filters**: Users can apply filters based on price, rating, and other criteria to refine their hotel search results.
-- **City Insights**: The platform provides insights into popular and trending cities, helping users discover new travel destinations.
-- **Recent Search History**: HotelHawk tracks users' recent searches, making it easy to revisit previous searches.
-- **Nearby Hotels**: The platform uses location-based indexing to help users find hotels near their chosen destination.
-- **Spell Check and Word Completion**: These features improve search accuracy by correcting misspelled words and suggesting completions for partially typed words.
-- **Pattern Finding using Regex**: This feature is used to accurately extract and display hotel prices from the aggregated data.
+HotelHawk consists of two primary components:
 
-### Data Structures and Algorithms Used
+- 🖥️ **Frontend:** Built with React.js + Material-UI for a responsive, interactive user experience
+- ⚙️ **Backend:** Powered by Java + Spring Boot and intelligent data structures for crawling, filtering, and ranking hotels
 
-The project makes use of various data structures and algorithms to ensure efficient data processing and retrieval:
+---
 
-- **Web Crawler**:
+## 🌟 Key Features
 
-  - **Data Structures**: `ArrayList`, `Hashtable`
-  - **Purpose**: To collect and organize data from multiple websites.
+- 🔍 **Multi-site Hotel Aggregation:** Fetches listings using Selenium-based crawlers
+- 🔧 **Custom Filters:** Sort hotels by price, rating, location, and more
+- 🧠 **Autocomplete + Spell Check:** Intelligent search suggestions using Trie and AVL Tree
+- 📍 **Nearby Hotels:** Geo-indexing to locate hotels near your selected city
+- 📜 **Search History Tracking:** Keeps a record of your recent queries
+- 🧩 **Pattern Matching with Regex:** Accurately extracts and validates pricing information
 
-- **HTML Parser**:
+---
 
-  - **Data Structures**: `ArrayList`, `Hashtable`, `HashMap`
-  - **Purpose**: To parse and extract meaningful information from HTML documents, such as hotel names, prices, ratings, and locations.
+## 🧠 Data Structures & Algorithms
 
-- **Inverted Indexing**:
+| Feature                       | Structures/Algorithms Used                  |
+| ----------------------------- | ------------------------------------------- |
+| Web Crawler                   | `ArrayList`, `Hashtable`                    |
+| HTML Parsing                  | `ArrayList`, `HashMap`, `Hashtable`         |
+| Inverted Index Search         | `Trie`, `HashMap`, `Array`                  |
+| Page Ranking                  | `PriorityQueue (MaxHeap)`, `HashMap`        |
+| Spell Check & Word Completion | `AVL Tree`, `Trie`, Edit Distance Algorithm |
+| Regex Pattern Matching        | Regex for price extraction                  |
+| Filters                       | `ArrayList` for criteria application        |
 
-  - **Data Structures**: `Trie`, `HashMap`, `Array`
-  - **Purpose**: Enables efficient searching of documents by associating search terms with their locations in the data.
+---
 
-- **Page Ranking**:
+## 🛠️ Tech Stack
 
-  - **Data Structures**: `Priority Queue (MaxHeap)`, `HashMap`
-  - **Purpose**: To rank and display the most relevant search results.
+### 🔹 Frontend
 
-- **Spell Checking and Word Completion**:
+- JavaScript / React.js
+- Material-UI
+- React-Hook-Form
+- React-Toastify
 
-  - **Data Structures**: `AVL Tree`, `Trie`
-  - **Algorithms**: Edit Distance Algorithm
-  - **Purpose**: To correct spelling errors and provide word suggestions.
+### 🔸 Backend
 
-- **Pattern Finding using Regex**:
+- Java
+- Spring Boot
+- Selenium
+- Maven
 
-  - **Libraries**: Regex
-  - **Purpose**: To extract and validate numerical data such as prices from the text.
+---
 
-- **Filters**:
-  - **Data Structures**: `ArrayList`
-  - **Purpose**: To filter search results based on user-defined criteria.
-
-## Technologies Used
-
-- **Frontend**:
-
-  - JavaScript
-  - ReactJS
-  - Material-UI
-  - React-Toastify
-  - React-Hook-Form
-
-- **Backend**:
-  - Java
-  - Spring Boot
-  - Selenium
-  - Algorithms and Data Structures
-
-## Getting Started
-
-To get started with HotelHawk, follow the steps below:
-
-### Clone the Repository
-
-First, clone the project from GitHub:
+## 📁 Project Structure
 
 ```bash
-git clone https://github.com/Vrutik21/HotelHawk.git
+HotelHawk/
+├── Backend/
+│   ├── src/main/java/com/HotelHawk/Spring/Application.java
+│   └── ... Spring Boot backend files
+├── Frontend/
+│   ├── src/       # React source code
+│   ├── public/    # Static assets
+│   ├── package.json
+│   └── ...
+└── README.md
 ```
 
-### Backend Setup
+---
 
-1. Navigate to the Backend directory:
+## 🚀 Getting Started
+
+### 🔧 Clone the Repository
+
+```bash
+git clone https://github.com/meetbhavsar99/HotelHawk.git
+cd HotelHawk
+```
+
+---
+
+### ⚙️ Backend Setup
 
 ```bash
 cd Backend
 ```
 
-2. Start the Backend by running the main application file located at `Backend/src/main/java/com/HotelHawk/Spring/Application.java`. You can do this using an IDE like VS code or Eclipse, or via the command line with the following command:
+Run the app via:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Alternatively, if you are using an IDE, simply open the project, locate the Application.java file, and run it.
+> Or, open `Application.java` in an IDE like IntelliJ or Eclipse and run it manually.
 
-### Frontend Setup
+---
 
-1. Navigate to the Frontend directory:
-
-```bash
-cd Frontend
-```
-
-2. Install the required dependencies:
+### 💻 Frontend Setup
 
 ```bash
-npm i
+cd ../Frontend
+npm install
+npm start
 ```
 
-3. Start the Frontend server:
+Access the app at:  
+🔗 [http://localhost:3000](http://localhost:3000)
 
-```bash
-npm run start
-```
+---
 
-4. Once the frontend is started, open your browser and navigate to `http://localhost:3000` to view the application.
+## 📚 Project Submission
 
-## Project Structure
+This project was submitted for the **COMP-8547: Advanced Computing Concepts** course during **Winter 2024** at the **University of Windsor**.  
+It was also selected and showcased at the **9th CS Demo Day**.
 
-```bash
-HotelHawk/
-├── Backend/
-│ ├── src/
-│ │ ├── main/
-│ │ │ ├── java/com/HotelHawk/Spring/Application.java
-│ │ └── ...
-│ └── ...
-├── Frontend/
-│ ├── src/
-│ ├── public/
-│ ├── package.json
-│ └── ...
-└── README.md
-```
+---
 
-- **Backend**:: Contains the Java Spring Boot application.
-- **Frontend**: Contains the ReactJS application.
+## 🙌 Acknowledgment
 
-## Project Submission
+This project was developed collaboratively.
 
-### This project is submitted as part of the COMP-8547:Advanced Computing Concepts course for the Winter 2024 session. It involves demonstrating the project during a scheduled slot. The project was also selected at 9th CS demo day at University of Windsor.
+I contributed to:
+
+- UI design for hotel listing cards and filters (React + MUI)
+- Integration of React-Hook-Form and Toast notifications
+- Enhancing filtering logic and component-level cleanup
+- Codebase restructuring and readability improvements
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 📫 Contact
+
+**Meet Bhavsar**  
+📧 [meetbhavsar99@gmail.com](mailto:meetbhavsar99@gmail.com)  
+💼 [LinkedIn](https://www.linkedin.com/in/meet-bhavsar-0059ba1b5/)
